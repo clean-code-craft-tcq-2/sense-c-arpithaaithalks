@@ -5,7 +5,7 @@ struct
   float min;
 } Stats;
 
-Stats computedStats;
+struct Stats computedStats = {average, max, min};
 Stats compute_statistics(const float* numberset, int setlength);
 
 typedef void (*alerter_funcptr)();
