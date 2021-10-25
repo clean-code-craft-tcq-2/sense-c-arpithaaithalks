@@ -4,7 +4,7 @@ struct Stats
   float average;
   float max;
   float min;
-} 
+};
 
 struct Stats computedStats;
 
