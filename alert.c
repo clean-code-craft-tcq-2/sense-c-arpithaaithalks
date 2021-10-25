@@ -1,31 +1,28 @@
 #include "alert.h"
-#include <stdlib.h>
-#include <math.h>
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
 
 void emailAlerter(void)
 {
-	emailAlertCallCount++;
+    emailAlertCallCount++;
 }
 
 void ledAlerter(void)
 {
-	ledAlertCallCount++;
+    ledAlertCallCount++;
 }
 
-check_and_alert(maxThreshold, alerters, computedStats)
+check_and_alert(float maxThreshold, alerter_funcptr alerters, struct Stats computedStats)
 {
-	int arraysize;
+    int arraysize;
+    arraysize = sizeof(alerters);
 	
-	arraysize = sizeof(alerters);
-	
-	if (computedStats.max > maxThreshold)
-	{
-		for(loop = 0; loop < arraysize; loop++)
-		{
-			alerters[loop]();
-		}
-	}
+    if (computedStats.max > maxThreshold)
+    {
+        for(loop = 0; loop < arraysize; loop++)
+        {
+            alerters[loop]();
+        }
+    }
 }
