@@ -1,11 +1,11 @@
-struct  
+struct  Stats
 {
   float average;
   float max;
   float min;
-} Stats;
+} ;
 
-struct Stats computedStats = {average, max, min};
+struct Stats computedStats;
 Stats compute_statistics(const float* numberset, int setlength);
 
 typedef void (*alerter_funcptr)();
