@@ -6,6 +6,6 @@ typedef struct Stats
   float min;
 };
 
-struct Stats computedStats;
+extern struct Stats computedStats;
 
 Stats compute_statistics(const float* numberset, int setlength);
