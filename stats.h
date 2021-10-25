@@ -1,10 +1,9 @@
-#include "alert.h"
-struct  Stats
+
+typedef struct Stats
 {
   float average;
   float max;
   float min;
-} ;
+} computedStats;
 
-struct Stats computedStats;
 Stats compute_statistics(const float* numberset, int setlength);
