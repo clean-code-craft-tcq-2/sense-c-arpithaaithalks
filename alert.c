@@ -25,7 +25,7 @@ check_and_alert(maxThreshold, alerters, computedStats)
 	{
 		for(loop = 0; loop < arraysize; loop++)
 		{
-			alerters[loop];
+			alerters[loop]();
 		}
 	}
 }
