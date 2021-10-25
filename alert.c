@@ -24,8 +24,8 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters, struct Stats 
     {
         for(loop = 0; loop < arraysize; loop++)
         {
-            alerters[loop]();
+            void alerters[loop]();
         }
     }
-    return null;
+    return 0;
 }
