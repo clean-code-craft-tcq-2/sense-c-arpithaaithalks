@@ -1,3 +1,4 @@
+#include "alert.h"
 struct  Stats
 {
   float average;
