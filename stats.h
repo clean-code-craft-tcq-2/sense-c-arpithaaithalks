@@ -1,11 +1,11 @@
 
-typedef struct _Stats
+struct Stats
 {
   float average;
   float max;
   float min;
-}Stats;
+};
 
-extern Stats computedStats;
+extern struct Stats computedStats;
 
 Stats compute_statistics(const float* numberset, int setlength);
