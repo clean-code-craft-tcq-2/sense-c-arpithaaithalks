@@ -14,7 +14,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
       {
          max = *numberset;
       }
-      else(*numberset < min)
+      if(*numberset < min)
       {
          min = *numberset;
       }
