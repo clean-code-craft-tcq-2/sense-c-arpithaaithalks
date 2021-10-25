@@ -3,6 +3,7 @@
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
+Stats computedStats;
 
 void emailAlerter(void)
 {
