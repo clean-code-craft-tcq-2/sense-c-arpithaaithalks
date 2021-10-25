@@ -27,5 +27,5 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters, struct Stats 
             void alerters[loop]();
         }
     }
-    return 0;
+    return;
 }
