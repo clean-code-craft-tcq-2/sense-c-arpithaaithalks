@@ -14,7 +14,8 @@ Stats compute_statistics(const float* numberset, int setlength) {
         s.min = NAN;
         s.max = NAN;
     }
-    
+    else
+    {
     for(loop = 0; loop < setlength; loop++) 
     {
       sum += *(numberset + loop);
@@ -30,6 +31,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
     s.average = (float)sum/setlength;
     s.min = min;
     s.max = max;
+    }
     return s;
 }
 
