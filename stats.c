@@ -18,13 +18,13 @@ Stats compute_statistics(const float* numberset, int setlength) {
     for(loop = 0; loop < setlength; loop++) 
     {
       sum += *(numberset + loop);
-      if(*numberset > max)
+      if(*(numberset + loop) > max)
       {
-         max = *numberset;
+         max = *(numberset + loop);
       }
-      if(*numberset < min)
+      if(*(numberset + loop) < min)
       {
-         min = *numberset;
+         min = *(numberset + loop);
       }
     } 
     s.average = (float)sum/setlength;
