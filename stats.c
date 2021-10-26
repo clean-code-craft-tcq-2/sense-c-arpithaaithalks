@@ -5,8 +5,8 @@ Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     int loop;
     float sum=0;
-    float max=0;
-    float min=0;
+    float max=*numberset;
+    float min=*numberset;
 
     if(setlength == 0)
     {
