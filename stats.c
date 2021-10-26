@@ -5,8 +5,8 @@ Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     int loop;
     float sum=0;
-    float max=*numberset;
-    float min=*numberset;
+    float max;
+    float min;
 
     if(setlength == 0)
     {
@@ -16,6 +16,10 @@ Stats compute_statistics(const float* numberset, int setlength) {
     }
     else
     {
+	    
+    max=*numberset;
+    min=*numberset;
+	    
     for(loop = 0; loop < setlength; loop++) 
     {
       sum += *(numberset + loop);
