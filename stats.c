@@ -43,7 +43,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr* alerters, Stats comput
 {
     int arraysize;
     int loop;
-    arraysize = sizeof(alerters);
+    arraysize = sizeof(alerters)/sizeof(alerters[0]);
 	
     if (computedStats.max > maxThreshold)
     {
