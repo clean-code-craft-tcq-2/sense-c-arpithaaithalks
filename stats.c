@@ -24,3 +24,19 @@ Stats compute_statistics(const float* numberset, int setlength) {
     s.max = max;
     return s;
 }
+
+void check_and_alert(float maxThreshold, alerter_funcptr* alerters, Stats computedStats)
+{
+    int arraysize;
+    int loop;
+    arraysize = sizeof(alerters);
+	
+    if (computedStats.max > maxThreshold)
+    {
+        for(loop = 0; loop < arraysize; loop++)
+        {
+            alerters[loop]();
+        }
+    }
+    return;
+}
