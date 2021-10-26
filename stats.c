@@ -8,7 +8,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
     float max=0;
     float min=0;
 
-    if(*numberset == 0)
+    if(setlength == 0)
     {
         s.average = NAN;
         s.min = NAN;
